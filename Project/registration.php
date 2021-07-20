@@ -5,10 +5,43 @@
 
 <?php echo $db_err; ?>
 
+
+<style>
+    .registration-form-wrapper {
+        padding: 12px;
+        background-color: #FFF;
+
+        border-radius: 2px;
+        border: 1px solid rgb(156, 156, 156);
+    }
+    
+    .registration-form-wrapper input[type="text"],  .registration-form-wrapper input[type="password"]{
+        width: 100%;
+        height: 24px;
+
+    }
+    .registration-form-wrapper textarea {
+        resize: none;
+        width: 100%;
+    }
+
+    .registration-cover-image {
+        background-image: url('resources/images/registrationBackground.ac824e2684878bf80ac8883e57fb15d0.jpg');
+        background-position-y: 80%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+</style>
 <div class="main-content-wrapper">
     
-    <form action="" method="POST">
-        <table border="1">
+    <div class="registration-cover-image"></div>
+    <form class="registration-form-wrapper" action="" method="POST">
+        <table>
             <caption>Profile Update Form</caption>
             <tr>
                 <td>Name</td>

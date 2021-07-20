@@ -1,8 +1,11 @@
 <?php
     $db_err = "";
-    $display = "none";
+
     $name = "";
     $err_name = "";
+
+    $password = "";
+    $err_password = "";
 
     $nid = "";
     $err_nid = "";
@@ -43,6 +46,8 @@
    if(isset($_POST['send-btn'])) {
 
         $name = htmlspecialchars($_POST['name']);
+        $password = htmlspecialchars($_POST['password']);
+
         $nid = htmlspecialchars($_POST['nid']);
 
         $occupation = htmlspecialchars($_POST['occupation']);
@@ -187,7 +192,7 @@
             $location = $_POST['location'];
             $dob = $_POST['dd'] . '/' .  $_POST['mm'] . '/' . $_POST['yy'];
 
-            $query = "insert into users values (NULL, '$email', '$pass', '$name', '$nid', '$gender', '$dob', '$occupation', '$phone', '$location', '$address')";
+            $query = "insert into users values (NULL, '$email', '$password', '$name', '$nid', '$gender', '$dob', '$occupation', '$phone', '$location', '$address')";
             $res = execute($query);
             if($res === true) {
                 header('Location: index.php');
@@ -198,10 +203,7 @@
 
    }
 
-   function insertUser(){
-
-        
-    }
+ 
 
 
    function PrintYear() {
