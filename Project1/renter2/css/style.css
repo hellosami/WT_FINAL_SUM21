@@ -1,0 +1,104 @@
+.content-wrapper {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+/* post rent */
+
+.block {
+    width: 100px;
+    height: 100px;
+    background-color: #27ae60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.content-wrapper {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+.block:hover {
+    cursor: pointer;
+    background-color: #2ecc71;
+}
+
+
+/* my posts */
+.main-content {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 12px;
+}
+
+
+.container-wrapper li div span {
+    display: block;
+    font-size: 16px;
+}
+
+.container {
+    border: 1px solid #ccc;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 24px !important;
+    font-weight: 600;
+}
+.category {
+    color: #444;
+}
+
+.container button {
+    width: 100px;
+    height: 40px;
+
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #3498db;
+}
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+/* menu */
+
+
+.menu {
+    vertical-align: top;
+}
+
+.menu button {
+    width: 100px;
+    height: 40px;
+    background-color: #27ae60;
+    border: 0;
+}
+.menu button:hover {
+    width: 100px;
+    height: 40px;
+    background-color: #2ecc71;
+    border: 0;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #e74c3c !important;
+}
+
+/* My posts */

@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* asd */
+.default-btn {
+    border: 1px solid #444;
+    background-color: #FFF;
+}
+
+.default-btn:hover {
+    background-color: #444;
+    cursor: pointer;
+    color: #FFF;
+}
+
+
+/* Menu */
+.main-content {
+    width: 768px;
+    margin: 0 auto;
+    border: 1px solid #CCC;
+    padding: 24px;
+}
+
+.navi-wrapper ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navi-wrapper ul li {
+    border: 1px solid #2980b9;
+    
+    padding: 6px;
+
+}
+
+.navi-wrapper ul li:hover {
+    background-color: #3498db;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.active {
+    background-color: #2980b9;
+    color: #FFF;
+}
+
+/* Post a rent */
+.content-wrapper {
+
+    padding: 16px;
+    /* background-image: url("../image/colorful-architecture-skyline-cityscape-illustrations-skyline-2.jpg"); */
+
+    
+}
+
+.btn-xl-container {
+   
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn-xl {
+    width: 150px;
+    height: 150px;
+    background-color: #27ae60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-xl:hover {
+    background-color: #2ecc71;
+    cursor: pointer;
+}
+.xlactive {
+    background-color: #3498db;
+}
+/* My posts */
+
+
+.added-posts-wrapper {
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow-y: scroll;
+}
+
+.added-posts li {
+    background-color: #e67e22;
+    padding: 12px;
+  
+}
+.added-posts li span {
+    display: block;
+    
+}
+
+.added-posts li div button{
+    border: 1px solid #444;
+    padding: 6px;
+
+}
+
+.added-posts li div button:hover {
+    background-color: #444;
+    cursor: pointer;
+    color: #FFF;
+}
+
+
+
+
+

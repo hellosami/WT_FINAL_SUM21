@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+.default-btn {
+    border: 1px solid #444;
+    background-color: #FFF;
+}
+
+.default-btn:hover {
+    background-color: #444;
+    cursor: pointer;
+    color: #FFF;
+}
+
+
+/* Menu */
+.main-content {
+    width: 768px;
+    margin: 0 auto;
+    border: 1px solid #CCC;
+    padding: 24px;
+}
+
+.navi-wrapper ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navi-wrapper ul li {
+    border: 1px solid #444;
+    padding: 6px;
+
+}
+
+.navi-wrapper ul li:hover {
+    background-color: #444;
+    cursor: pointer;
+    color: #FFF;
+}
+
+/* Search */
+
+.search-wrapper {
+
+    padding: 16px;
+    background-image: url("../image/colorful-architecture-skyline-cityscape-illustrations-skyline-2.jpg");
+    object-fit: cover;
+
+}
+
+.search-wrapper input {
+    width: 100%;
+    font-size: 24px;
+}
+
+.search-result-wrapper {
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow-y: scroll;
+}
+
+.search-result li {
+    background-color: #FFF;
+    padding: 12px;
+}
+.search-result li span {
+    display: block;
+    
+}
+
+.search-result li div button{
+    border: 1px solid #444;
+    padding: 6px;
+
+}
+
+.search-result li div button:hover {
+    background-color: #444;
+    cursor: pointer;
+    color: #FFF;
+}
+
+/* Company */
+.content-wrapper {
+
+    padding: 16px;
+    /* background-image: url("../image/colorful-architecture-skyline-cityscape-illustrations-skyline-2.jpg"); */
+    object-fit: cover;
+
+}
+
+
+/* Login */
+
+
+.content-wrapper form {
+    width: max-content;
+    padding: 12px;
+    background-color: #f7f6f5;
+    border: 1px solid #CCC;
+}
+
+.content-wrapper form input[type="text"], .content-wrapper form input[type="password"],  .content-wrapper form input[type="submit"], .content-wrapper form select {
+    width: 100%;
+    height: 24px;
+}
+
+
+
+
