@@ -96,12 +96,12 @@
 		}
 
         if(!$hasError){
-			$rs = Insert($email, $pass, $name, $rentas);
-			
-			if ($rs === true){
-				setcookie("isRegister", "yes", 0, "/");
-				header("Location: login.php");
+
+			$rs = create($email, $pass, $name, $rentas);
+
+			if ($rs == true){
 				
+				echo "<script>alert('User Created!!')</script>";
 			}
 			
 		}
@@ -109,7 +109,7 @@
 
     }
 
-    function Insert($email, $pass, $name, $rentas){
+    function create($email, $pass, $name, $rentas){
 		$date = 		$date = date("Y-m-d H:i:s");
         $query = "INSERT INTO SIGNUP values (NULL, '$email', '$pass', '$name', '$rentas', 0, '$date', NULL)";
         return execute($query);

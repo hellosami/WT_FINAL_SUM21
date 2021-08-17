@@ -25,8 +25,8 @@
                 
 
                     <?php
-
-                    $result = GetRequestsByIDRENTEE($_SESSION['RENTEEID']);
+             
+                    $result = GetRequestsByIDRENTEE($_SESSION['IAMRENTEE']);
                 
                     if(count($result)  > 0) {
                         foreach($result as $key => $value) {

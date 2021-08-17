@@ -16,7 +16,7 @@
             background-color: #2ecc71;
             color: #fff;
             padding: 24px;
-            font-size: 34px;
+            font-size: 24px;
             text-align: center;
             width: max-content;
         }
@@ -38,6 +38,7 @@
             
         <?php
     $key = $_SESSION['RID'];
+  
     $result = GetTotalCost($key);
 
     if(count($result)  > 0) {
@@ -59,7 +60,7 @@
       <?php
     $key = $_SESSION['RID'];
     $result = GetRequestsIncomeByID($key);
-
+    echo "ACCEPTED POSTS HISTORY";
     if(count($result)  > 0) {
         foreach($result as $key => $value) {
 ?>

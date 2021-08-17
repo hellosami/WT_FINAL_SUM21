@@ -9,7 +9,7 @@
         <?php 
      
 
-            if(!isset($_SESSION['RENTEEID'])) {
+            if(!isset($_SESSION['IAMRENTEE'])) {
                     
 ?>
         <li onclick="location.href='login.php'">Log in</li>

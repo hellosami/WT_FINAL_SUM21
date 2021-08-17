@@ -96,6 +96,7 @@
 		}
 
         if(!$hasError){
+			
 			$rs = Insert($email, $pass, $name, $rentas);
 			
 			if ($rs === true){

@@ -26,16 +26,16 @@
         
         <?php
 
-            $key =  $_SESSION['RENTEEID'] ;
+            $key =  $_SESSION['RID'] ;
             $result = GetUserInfoByID($key);
 
             if(count($result)  > 0) {
                 foreach($result as $key => $value) {
-
+                    $temail1 = $value['email'];
                     echo "
                         Name: ". $value['name'] ."<br>
                         Email: ". $value['email'] ."<br>
-                        Rent As: ". $value['rentas'] ."<br>
+                        Rent As: ". $value['ucategory'] ."<br>
                         Enrollment: ". $value['enrollment'] ."
                     ";
 
@@ -50,7 +50,7 @@
                 <table >
                     <tr>
                         <td>Email*</td>
-                        <td><input type="text" value="<?php echo $_SESSION['RENTEE-Email'];?>"  disabled></td>
+                        <td><input type="text" value="<?php echo  $temail1;?>"  disabled></td>
                         
                     </tr>
                     <tr>

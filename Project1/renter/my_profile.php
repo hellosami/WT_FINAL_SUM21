@@ -31,11 +31,11 @@
 
             if(count($result)  > 0) {
                 foreach($result as $key => $value) {
-
+                    $temail1 = $value['email'];
                     echo "
                         Name: ". $value['name'] ."<br>
                         Email: ". $value['email'] ."<br>
-                        Rent As: ". $value['rentas'] ."<br>
+                        Rent As: ". $value['ucategory'] ."<br>
                         Enrollment: ". $value['enrollment'] ."
                     ";
 
@@ -50,16 +50,16 @@
                 <table >
                     <tr>
                         <td>Email*</td>
-                        <td><input type="text" value="<?php echo $_SESSION['RID-Email'];?>"  disabled></td>
+                        <td><input type="text" value="<?php echo $temail1;?>"  disabled></td>
                         
                     </tr>
                     <tr>
                         <td>Password*</td>
-                        <td><input type="text" value="<?php echo $pass;?>" name="pass"> <?php echo $err_pass;?></td>
+                        <td><input type="password" value="<?php echo $pass;?>" name="pass"> <?php echo $err_pass;?></td>
                     </tr>
                     <tr>
                         <td>Confirm Password*</td>
-                        <td><input type="text" value="<?php echo $cpass;?>" name="cpass"> <?php echo $err_cpass;?></td>
+                        <td><input type="password" value="<?php echo $cpass;?>" name="cpass"> <?php echo $err_cpass;?></td>
                     </tr>
                     <tr>
                         <td>Name*</td>

@@ -25,9 +25,8 @@
             
             <?php 
 
-            echo "Welcome, " . $_GET['email'];
-            $_SESSION['RENTEEID'] = $_GET['id'];
-            $_SESSION['RENTEE-Email'] = $_GET['email'];
+            echo "Welcome, " . $_SESSION['RID-Email'];
+
             ?>
             
             </div>

@@ -62,26 +62,31 @@
                 if($cuser == "renter") {
 
                     // Creating session
-                    foreach($rs as $key => $value) {
+                    /*foreach($rs as $key => $value) {
                         $_SESSION['RID'] = $value['id'];
                         $_SESSION['RID-Email'] = $value['email'];
-                    }
+                    }*/
+                    session_start();
+                    $_SESSION['RID'] = $rs['id'];
+                    $_SESSION['RID-Email'] = $rs['email'];
 
+             
 
                     header("Location: renter/index.php?btn=1&xl=1&category=MotorBike&email=".$_SESSION['RID-Email'] . "&id=".$_SESSION['RID'] );
                 }
 
                 if($cuser == "rentee") {
                        
-                    // Creating session
-                    foreach($rs as $key => $value) {
-                        
-                        $_SESSION['RENTEEID'] = $value['id'];
-                        $_SESSION['RENTEE-Email'] = $value['email'];
                   
-                    }
+                        
+                        session_start();
+                        $_SESSION['RID'] = $rs['id'];
+                        $_SESSION['IAMRENTEE'] = $rs['id'];
+                         $_SESSION['RID-Email'] = $rs['email'];
+                  
+                  
 
-                   header("Location: rentee/index.php?email=".$_SESSION['RENTEE-Email'] . "&id=".$_SESSION['RENTEEID'] );
+                   header("Location: rentee/index.php" );
                 }
 
 
@@ -99,8 +104,13 @@
 
   
 
-            $query = "SELECT * FROM SIGNUP WHERE EMAIL = '$email' && PASS = '$pass' && RENTAS = '$cuser';";
-            return get($query);
+            $query = "SELECT * FROM SIGNUP WHERE EMAIL = '$email' && PASS = '$pass' && ucategory = '$cuser';";
+            //echo $query;
+            $rs = get($query);
+            if(count($rs)>0){
+                return $rs[0];
+            }
+            return false;
   
             
 

@@ -2,13 +2,15 @@
 if (isset($_POST["delete"])){
 
 	$query = "DELETE FROM SIGNUP WHERE EMAIL = '". $_POST['email']."'";
-	return execute($query);
+	execute($query);
+	echo "<script>alert('User Deleted!!')</script>";
 }
 
 if (isset($_POST["delete-manager"])){
 
 	$query = "DELETE FROM MANAGER WHERE EMAIL = '". $_POST['email']."'";
-	return execute($query);
+	execute($query);
+	echo "<script>alert('Manager Deleted!!')</script>";
 }
         
 

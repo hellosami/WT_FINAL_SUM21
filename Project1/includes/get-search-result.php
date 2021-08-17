@@ -23,9 +23,9 @@
                         <br>
                         <button onclick="downloadasTextFile('<?php echo "{$value['tc']}"; ?>')">SEE MORE</button>
 
-                        <?php if(isset($_SESSION['RENTEEID'])) {
+                        <?php if(isset($_SESSION['IAMRENTEE'])) {
                                 ?>
-                                 <button onclick="SendARequest('<?php echo "{$value['id']}"; ?>', '<?php echo "{$value['renter_id']}"; ?>', '<?php echo $_SESSION['RENTEE-ID']; ?>');">SEND REQUEST</button>
+                                 <button onclick="SendARequest('<?php echo "{$value['id']}"; ?>', '<?php echo "{$value['renter_id']}"; ?>', '<?php echo $_SESSION['RID']; ?>');">SEND REQUEST</button>
                                 <?php
                         } ?>
                        

@@ -1,12 +1,13 @@
 <?php
 
 
-	if(isset($_SESSION['RID-Email'])) {
-		$email = $_SESSION['RID-Email'];
+	if(isset($_POST['email'])) {
+		$email = $_POST['email'];
 	}else {
 		$email = '';
 	}
-    
+	
+
     $err_email = "";
 
     $pass = "";
@@ -91,8 +92,10 @@
         if(!$hasError){
 			
 			$rs = Update($email, $pass, $name);
-			if ($rs === true){
-				header("Location: ../login.php");
+			
+
+			if ($rs == true){
+				echo "<script>alert('Updated!!')</script>";
 			}
 		}
 
@@ -101,8 +104,9 @@
 
     function Update($email, $pass, $name){
 
-        $query = "UPDATE SIGNUP SET PASS = '$pass', NAME = '$name' WHERE EMAIL = '$email'";
+        $query = "UPDATE SIGNUP SET PASS = '$pass', NAME = '$name' WHERE EMAIL = '$email';";
         return execute($query);
+		
     }
 
 

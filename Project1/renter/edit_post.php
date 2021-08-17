@@ -15,7 +15,7 @@ $tloc = "";
 $taddress = "";
 $tphone = "";
 $ttc = "";
-                    $result = GetPostsByID($_SESSION['RID']);
+                    $result = GetPostedByID($_GET['id']);
 
                     if(count($result)  > 0) {
                         foreach($result as $key => $value) {

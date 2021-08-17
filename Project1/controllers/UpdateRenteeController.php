@@ -3,7 +3,7 @@
 
 
    	include '../models/MyValidation.php';
-    $email = $_SESSION['RENTEE-Email'];
+    $email = $_SESSION['RID-Email'];
     $err_email = "";
 
     $pass = "";
@@ -88,7 +88,7 @@
         if(!$hasError){
 			
 			$rs = Update($email, $pass, $name);
-			if ($rs === true){
+			if ($rs == true){
 				header("Location: ../login.php");
 			}
 		}
@@ -99,7 +99,8 @@
     function Update($email, $pass, $name){
 
         $query = "UPDATE SIGNUP SET PASS = '$pass', NAME = '$name' WHERE EMAIL = '$email'";
-        return execute($query);
+		//var_dump($query);
+       return execute($query);
     }
 
 

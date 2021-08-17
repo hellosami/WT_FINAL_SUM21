@@ -3,20 +3,13 @@
     require_once '../models/db_config.php';
     require_once '../models/MyValidation.php';
 
-	  
+
+
+
 	if(isset($_SESSION['RID'])) {
-  
-		$_SESSION['RID'] = $_GET['id'];
-		$_SESSION['RID-Email'] = $_GET['email'];
-	} else {
-
-	}
-
-
-	//if(isset($_SESSION['RID'])) {
 	//	$renter_id = $_SESSION['RID'];
 	$renter_id = $_SESSION['RID'];
-	//}
+	}
 
     $title = "";
     $err_title = "";
@@ -198,6 +191,11 @@
         $query = "SELECT * FROM POST_VEHICLE WHERE RENTER_ID = '$ID';";
         return get($query);
     }
+
+	function GetPostedByID($ID){
+        $query = "SELECT * FROM POST_VEHICLE WHERE ID = '$ID';";
+        return get($query);
+    }
 	
 	function GetTotalCost($ID) {
 		$query = "SELECT * FROM signup Where ID= '$ID';";
@@ -213,15 +211,16 @@
 
 	function GetRequestsByIDRENTEE($ID){
         $query = "SELECT post_vehicle.title, post_vehicle.contact, post_vehicle.rate, requests.rentee_id, requests.renter_id, requests.id
-		FROM post_vehicle
-		INNER JOIN requests ON requests.renter_id=post_vehicle.renter_id AND requests.post_id=post_vehicle.id AND requests.status = 1;";
+		FROM post_vehicle 
+
+		INNER JOIN requests ON requests.renter_id=post_vehicle.renter_id AND requests.post_id=post_vehicle.id AND requests.status = 1 AND requests.rentee_id = $ID;";
         return get($query);
     }
 	
 	function GetRequestsIncomeByID($ID){
         $query = "SELECT post_vehicle.title, post_vehicle.rate, post_vehicle.insertedDate, requests.rentee_id, requests.renter_id, requests.id
 		FROM post_vehicle
-		INNER JOIN requests ON requests.renter_id=post_vehicle.renter_id AND requests.post_id=post_vehicle.id AND requests.status = 1;";
+		INNER JOIN requests ON requests.renter_id=post_vehicle.renter_id AND requests.post_id=post_vehicle.id AND requests.status = 1 AND requests.renter_id = $ID ;";
         return get($query);
     }
 
